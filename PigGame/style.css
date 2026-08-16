@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background-image: linear-gradient(to top left, #0a3d62 0%, #82ccdd 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    height: 100vh;
+}
+#game{
+    box-sizing: border-box;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(200px);
+    filter: blur();
+    width: 60%;
+    height: 65vh;
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
+}
+.players{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 50%;
+    transition: all 0.75s;
+    padding: 9%;
+}
+
+h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.score{
+    color: #0a3d62;
+    font-size: 80px;
+    margin-bottom: auto;
+}
+.current{
+    box-sizing: border-box;
+    background-color: #0a3d62;
+    color: #fff;   
+    border-radius: 9px;
+    width: 62%;
+    padding: 4%;
+    text-align: center;
+    transition: all 0.75s;
+}
+.current-label{
+    text-transform: uppercase;  
+    margin-bottom:5px;
+    margin-top:8px;
+}
+.current-score{
+    font-size: 30px;
+}
+.btn{
+    position: absolute;
+    left: 50%;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 0.5% 2.6%;
+    border-radius: 50rem;
+    transform: translateX(-50%);
+    color: #444;
+    background-color: white !important;
+    transition: all 0.2s;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.btn::first-letter {
+    font-size: 1.5rem;
+    margin-right: 0.7rem;
+}
+.btnnew{
+    top: 5%;
+}
+.btnroll{
+    top: 66%;
+}
+.btnhold{
+    top: 77%;
+}
+.dice{
+    position: absolute;
+    height: 7rem;
+    left: 45%;
+    top: 30%;
+}
+.playerwinner {
+  background-color: #2f2f2f;
+}
+
+.playerwinner .name ,.playerwinner .score {
+  font-weight: 600;
+  color: #dff9fb;
+}
+
+.hidden {
+  display: none;
+}
+.playerActive{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.playerActive .name{
+  font-weight: 700;
+}
+.playerActive .score{
+  font-weight: 400;
+}
+.playerActive .current {
+  opacity: 1;
+}
